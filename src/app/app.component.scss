@@ -1,0 +1,163 @@
+@import "src/colorVariables";
+
+.bold {
+  font-weight: 700;
+  font-size: inherit;
+}
+/* div {
+  outline: 1px solid red;
+} */
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
+  justify-content: center;
+  align-items: center;
+
+  & > *:not(:first-child) {
+    margin-top: 2rem;
+  }
+}
+
+.explanation-container {
+  box-shadow: $heavy-box-shadow;
+  max-width: 50ch;
+  padding: 1rem;
+  background-color: $white;
+  color: black;
+}
+
+.result {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.explanation {
+  font-size: 1.25rem;
+}
+
+.hidden-result {
+  display: none;
+}
+
+.shown-result {
+  display: block;
+}
+
+.correct-result {
+  color: $success;
+}
+
+.wrong-result {
+  color: $danger;
+}
+
+.flashcards-container {
+  box-shadow: $heavy-box-shadow;
+  border: none !important;
+  padding: 1rem;
+  max-width: 50ch;
+  background-color: $white;
+  color: black;
+
+  & > *:not(:first-child) {
+    margin-top: 0.5rem;
+  }
+}
+
+.question {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.answer-box {
+  border: 0.2rem solid transparent;
+  border-radius: 0.325rem;
+
+  &:hover {
+    cursor: pointer;
+    border-color: $primary;
+  }
+}
+
+.selected-answer {
+  border-color: $primary !important;
+}
+
+.answer,
+.answer > span {
+  padding: 0.5rem 0.25rem;
+  font-size: 1.25rem;
+}
+
+.button-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.button-box {
+  margin-top: 1rem;
+
+  & > *:not(:first-child) {
+    margin-left: 1rem;
+  }
+
+  & > button {
+    padding: 0.25rem 0.5rem;
+    font-size: 1.25rem;
+    background-color: $primary;
+    outline: none;
+    border: none;
+    color: $white;
+    border-radius: 0.325rem;
+    flex: 1;
+
+    &:hover {
+      background-color: $info;
+    }
+  }
+}
+
+.chapter-header {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: $rad-red;
+  font-weight: 700;
+}
+
+.chapters {
+  display: flex;
+  flex-direction: row;
+
+  & *:not(:first-child) {
+    margin-left: 0.5rem;
+  }
+}
+
+.chapter {
+  display: inline;
+  background-color: $info;
+  padding: 0.75rem;
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  height: 1.75rem;
+  width: 1.75rem;
+  text-align: center;
+  line-height: 1.75rem;
+  transition: text-shadow 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.8);
+  }
+}
+
+.active-chapter {
+  background-color: $primary;
+}
